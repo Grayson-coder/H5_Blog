@@ -1,0 +1,61 @@
+.main-panel {
+    background-color: rgb(238, 238, 238);
+}
+
+
+.main-panel>.content {
+    padding-top: 0;
+}
+
+.main-panel>.content .article {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .4s;
+    margin: 25px 0;
+}
+
+.main-panel>.content .article:hover {
+    transform: translate(0, -15px);
+    box-shadow: 0 0 10px skyblue;
+}
+
+.main-panel>.content .article .article-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: plum;
+}
+
+.main-panel>.content .article .article-content {
+    text-indent: 16px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.main-panel>.content .article .article-create_time {
+    text-align: right;
+    font-size: 12px;
+    column-count: #666;
+}
+
+.main-panel>.content .article a {
+    margin-right: 10px;
+}
+
+/* 吐司弹窗样式 */
+.alert-info,
+.alert-danger {
+    display: none;
+    position: fixed;
+    width: 28vw;
+    text-align: center;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 999999;
+}
+
+/* 模态框样式 */
+.modal-body textarea {
+    height: 200px !important;
+}

@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "27525609-9940-49bf-a27b-a37071d16e4c",
+		"name": "博客后台管理",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "林康龙",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/home",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章 _ 删除",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/article/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章 _ 新增",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "ES6",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "ES6很棒！",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/article",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章 _ id查询",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/article/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"article",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章 _ 修改",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "aaa",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "aaa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/article/6?title=我不是药神&content=我不是药神",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"article",
+						"6"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "我不是药神"
+						},
+						{
+							"key": "content",
+							"value": "我不是药神"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "文章 _ 关键字查询",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "key",
+							"value": "a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/article/key",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"article",
+						"key"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
